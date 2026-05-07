@@ -11,7 +11,7 @@
 ## 2. 需求與交付
 
 ### 功能需求
-- 函式接口：`std::vector<int> TwoSumArray(std::vector<int> nums, int target)`
+- 函式接口：`std::vector<int> TwoSumArray(const std::vector<int>& nums, int target)`
 - 函式接口：`std::vector<int> TwoSumHashTable(std::vector<int> nums, int target)`
 - 內部必須處理負數、重複值、目標為 0 或極大值情形。
 - 如未找到，採拋例外或返回空向量（需在 SRS 中明確說明）。

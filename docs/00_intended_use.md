@@ -24,8 +24,8 @@
 ## 3. Inputs / Outputs (輸入與輸出)
 
 ### Input(s):
-- `std::vector<int> nums`: 整數陣列。
-- `int target`: 目標總和。
+- `std::vector<int> nums`: 整數陣列 (長度範圍 2 至 10,000)。
+- `int target`: 目標總和 (支援正負整數)。
 
 ### Output(s):
 - `std::vector<int>`: 包含兩個索引值的陣列，例如 `[0, 1]`。
@@ -38,7 +38,7 @@
 
 ### Functional success:
 - 兩個演算法均能精確回傳正確的索引值。
-- 對於無解情況（雖專案假設有唯一解）應有合理的錯誤處理機制。
+- **異常處理**：若輸入不符合「唯一解」假設（如無解），函數應回傳空向量 `std::vector<int>{}` 並記錄日誌。
 
 ### Quality success:
 - GitHub Actions CI 狀態為 Green（所有測試通過）。

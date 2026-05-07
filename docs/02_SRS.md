@@ -55,8 +55,9 @@
 ### 3.1 功能需求
 - FR1：`TwoSumArray(nums, target)` 必須在存在解時返回兩個正確索引。
 - FR2：`TwoSumHashTable(nums, target)` 回傳一致正確索引且時間複雜度 O(n)。
-- FR3：遇無解情境，可透過 `std::optional<std::vector<int>>` 或直接 `std::vector<int>` 空結果處理。
+- FR3：若無解或輸入不合法，應回傳空向量 std::vector<int>{}
 - FR4：輸入為空或一個元素時，返空或例外。
+- FR5：函數應保證不修改輸入的 nums 陣列（即使用 const &）
 
 ### 3.2 性能需求
 - PR1：`TwoSumArray` 執行時間 O(n^2)，面向教學及驗證。
@@ -71,6 +72,7 @@
   - 負數、重複、目標 0
   - 空陣列、1 元素、無解
   - 大 10000 元素執行時間測量（Hash 版）
+  - 確保在  n=10,000 時，TwoSumArray 不會導致系統當機，且 TwoSumHashTable 能在極短時間內完成。
 
 ### 3.5 可靠性需求
 - 在資料長度 1000 內范圍，100% 通過測試。
@@ -82,7 +84,7 @@
 - 可建簡單 main 顯示執行結果或讀取參數。
 
 ### 4.2 軟體介面
-- C++ 函式呼叫：`TwoSumArray`、`TwoSumHashTable`。
+- C++ 函式呼叫：`std::vector<int> TwoSumArray(const std::vector<int>& nums, int target);`、`std::vector<int> TwoSumHashTable(const std::vector<int>& nums, int target);`。
 
 ## 5. 其他需求
 
