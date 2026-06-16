@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <format>
-#include "include/twosum.hpp"
+#include "twosum.hpp"
 
 void printResult(const std::string& label, const std::vector<int>& res) {
     std::cout << label << ": ";
